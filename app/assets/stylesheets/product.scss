@@ -1,0 +1,57 @@
+// Base styling for each product container
+.product {
+    display: flex;
+    align-items: start;
+    margin: 20px auto; // Centers the product and adds margin
+    width: 1000px; // Fixed width, adjust as needed
+    border: 1px solid #ccc; // Example border, modify as per design
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional shadow for depth
+  
+    img {
+      width: 150px; // Fixed width for all images
+      height: 150px; // Fixed height for all images
+      object-fit: cover; // Ensures the image covers the area without distortion
+      margin-right: 20px;
+      border-radius: 5px; // Optional, for rounded corners
+    }
+  
+    .details {
+      display: flex;
+      flex-direction: column;
+  
+      p {
+        margin: 0 0 10px; // Spacing between paragraphs
+  
+        &:first-child {
+          font-weight: bold;
+          font-size: 1.2em; // Adjust font size as needed
+        }
+  
+        &:nth-child(2) {
+          // Additional styling for description
+        }
+  
+      }
+      .price{
+        font-size: 1.1em;
+        color: green; // For price, adjust as needed
+      }
+    }
+  }
+  #all {
+    width: 1200px;
+    margin: 0 auto; // Center the container
+    padding: 20px;
+  
+
+  .product-link {
+    text-align: right;
+    margin-top: 10px;
+  }
+  .new-product {
+    font-weight: bold;
+    font-size: 1.5em; 
+  }
+  }
+  

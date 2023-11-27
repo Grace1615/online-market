@@ -1,0 +1,20 @@
+
+<div class = "shopper" >
+<h1>Product Catelog</h1>
+<br>
+<br>
+  <% @allproducts.each do |product| %>
+    <div class="product-shopper">
+      <div class="product-image">
+        <%= image_tag(product.image) %>
+      </div>
+      <div class="product-details">
+        <h3> <%= product.name %> </h3>
+        <p class="product-description"> <%= product.description %> </p>
+        <p> <%= number_to_currency(product.price) %> </p>
+        <%= button_to 'Add to Cart',
+         lineitems_path(product_id: product.id), class: 'add_to_cart', remote: true %>
+      </div>
+    </div>
+  <% end %>
+</div>
