@@ -4,10 +4,13 @@
 <h3> Items in your shopping cart</h3>
 
 <table>
+<td>Quantity</td>
+<td>Name</td>
+<td>Price</td>
   <% @cart.lineitems.each do |item| %>
   <tr>
 
-    <td> <%= item.quantity %> </td>
+    <td><%= item.quantity %>  </td>
     <td> <%= item.product.name %></td>
     <td> <%= item.product.price %></td>
   </tr>

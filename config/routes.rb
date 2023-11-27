@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :carts
   get 'shopper/index'
   root "shopper#index", as: "shopper"
+  get 'shopper/show/:id', to: 'shopper#show', as: 'shopper_show'
   resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

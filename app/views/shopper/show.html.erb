@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<div  class="product">
+  <%= image_tag(@product.image) %>
+  <div class="details">
+    <p>
+      <%= @product.name %>
+    </p>
+
+    <p>
+
+      <%= @product.description %>
+    </p>
+
+    <p class="price">
+      <%= number_to_currency(@product.price) %>
+    </p>
+    <%= button_to 'Add to Cart',
+    lineitems_path(product_id: @product.id), class: 'add_to_cart', remote: true %>
+    <%= button_to 'Back', shopper_path, method: :get %>
+  </div>
+ 
+
+
+</div>

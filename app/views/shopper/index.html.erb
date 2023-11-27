@@ -1,8 +1,16 @@
 
 <div class = "shopper" >
-<h1>Product Catelog</h1>
+<h1>Product Catalog</h1>
+<!-- Search Form -->
+  <div class="scontainer">
+    <%= form_with(url: shopper_url, method: :get, local: true) do %>
+      <%= text_field_tag :search, params[:search], placeholder: "search", class: "sfield" %>
+      <%= submit_tag "Search", class: "sbutton" %>
+    <% end %>
+  </div>
 <br>
 <br>
+
   <% @allproducts.each do |product| %>
     <div class="product-shopper">
       <div class="product-image">
@@ -14,6 +22,9 @@
         <p> <%= number_to_currency(product.price) %> </p>
         <%= button_to 'Add to Cart',
          lineitems_path(product_id: product.id), class: 'add_to_cart', remote: true %>
+         <%= link_to 'View Details', shopper_show_path(product) %>
+
+
       </div>
     </div>
   <% end %>
